@@ -8,5 +8,9 @@
 <body>
     <h1>JoPlex, my own Video Player</h1>
     <h2>Choose your video!</h2>
+    {% for video in available_videos: %}
+        <p>{{ video }}</p>
+        <a href={{ url_for('video_player', video_id=video) }}>Watch!</a>
+    {% endfor %}
 </body>
 </html>
